@@ -1,0 +1,30 @@
+{% load header_menu %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fist page</title>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet' type='text/css' href='{{STATIC_URL}}css/base.css'>
+    {% block javascript %}{% endblock %}
+  </head>
+  <body>
+    <div id='page'>
+      <div id='header'>
+       {% block header %}{% endblock %}
+      </div>
+      <div id='container'> 
+       <div id='container-wrapper'>
+        <div id='content'>
+      	  {% block content %}{% endblock %}
+        </div>
+        <div id='primary' class='right-side'>
+	  {% block primary %}{% endblock %}
+        </div>
+      </div>
+     </div>
+      <div id='footer'>
+        {% block footer %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

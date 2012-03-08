@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load header_menu %}
+
+{% block header %}
+    <div class='center'>
+     <div id='header-wrapper'>
+      <div id='menu'>
+	{% header_menu %}
+     </div>
+     <div id='search' class='right-side'>
+   	<input type=search name=s>
+     </div>
+    </div>
+  </div>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block primary %}Primary{% endblock %}

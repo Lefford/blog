@@ -1,0 +1,19 @@
+{% block content %}
+  <section>
+    {% for post in object_list %}
+     <article>
+	<div class='data-block'>
+		<abbr class='published' title='{{post.date_created}}'>
+			<span class='month'>{{post.date_created|date:'M'}}</span>
+			<span class='day'>{{post.date_created|date:'t'}}</span>
+		</abbr>
+		<h2>{{ post.title}}</h2>
+	</div>
+	<div>
+		{{ post.body }}
+	</div>
+	<a href='{% url post-detail post.id %}'>{{ post.title }}</a>
+    </article>
+    {% endfor %}
+  </section>
+{% endblock %}

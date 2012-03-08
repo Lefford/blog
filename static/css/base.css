@@ -1,0 +1,16 @@
+.center { width: 950px; margin: 0 auto; position: relative;}
+
+ul { list-style: none; }
+ul > li:first-child { margin-right: 0px;}
+ul > li.menu-item { float: left; margin-right:1em; }
+li.menu-item a {text-decoration: none; }
+ul.menu-buttons { padding: 0px;}
+.clear { clear: both; }
+
+#menu { height: 80px; }
+#page {background-color: #F2F2F2; min-width: 970px; height: 100%}
+#header-wrapper{ width: 990px;}
+#content {width: 620px }
+#container { margin: 0 auto; width:950px; position: relative; }
+#primary { width: 300px; height:100%; }
+.right-side {position: absolute; right:0px; top: 0px;}
