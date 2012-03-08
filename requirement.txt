@@ -1,0 +1,12 @@
+Django          - 1.3.1        - active 
+MySQL-python    - 1.2.3        - active 
+PIL             - 1.1.7        - active 
+Python          - 2.7.2+       - active development (/usr/lib/python2.7/lib-dynload)
+South           - 0.7.3        - active 
+distribute      - 0.6.24       - active 
+ipdb            - 0.6.1        - active 
+ipython         - 0.12         - active 
+pip             - 1.0.2        - active 
+simplejson      - 2.3.2        - active 
+wsgiref         - 0.1.2        - active development (/usr/lib/python2.7)
+yolk            - 0.4.1        - active 
