@@ -1,3 +1,4 @@
+html, body, ul { margin:0px; padding:0px}
 .center { width: 950px; margin: 0 auto; position: relative;}
 
 ul { list-style: none; }

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load header_menu %}
-
 {% block header %}
     <div class='center'>
      <div id='header-wrapper'>
@@ -13,5 +12,6 @@
     </div>
   </div>
 {% endblock %}
+{% block breadcrumbs %}you are here: {{ flatpage.title|title }}{% endblock %}
 {% block content %}{% endblock %}
 {% block primary %}Primary{% endblock %}

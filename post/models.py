@@ -1,7 +1,5 @@
 from django.db import models
-from django.contrib import admin
-
-# Create your models here.
+from post.forms import FlatPageForm
 
 class Post(models.Model):
 	title 		= models.CharField(max_length=255)
@@ -16,8 +14,3 @@ class ContentBlock(models.Model):
 	
 	class Meta:
 		abstract = True
-
-class PostAdmin(admin.ModelAdmin):
-	search_fields = ['title']
-
-admin.site.register(Post, PostAdmin)
