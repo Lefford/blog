@@ -1,5 +1,5 @@
 from django.db import models
-from post.forms import FlatPageForm
+from django.contrib.flatpages.models import FlatPage
 
 class Post(models.Model):
 	title 		= models.CharField(max_length=255)
@@ -14,3 +14,13 @@ class ContentBlock(models.Model):
 	
 	class Meta:
 		abstract = True
+
+class CMSPage(FlatPage):
+	order_by = models.ForeignKey('CMSPage', null=True) 
+
+class SubPage(CMSPage):
+	cmspage = models.ForeignKey('CMSPage', related_name='sub_page')
+
+class RealPage(FlatPage):
+	class Meta:
+		proxy = True
