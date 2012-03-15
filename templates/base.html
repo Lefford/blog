@@ -12,6 +12,9 @@
       <div id='header'>
        {% block header %}{% endblock %}
       </div>
+      <div id='breadcrumbs'>
+      	{% block breadcrumb %}<span class='small'>You are here{{ block.super }}</span>{% endblock %}
+      </div>
       <div id='container'> 
        <div id='container-wrapper'>
         <div id='content'>
