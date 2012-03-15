@@ -1,14 +1,17 @@
-from django.contrib.flatpages.models import FlatPage
+from post.models import ParentPage
 from django.template import Library, Node
 
 register = Library()
 
 def header_menu():
-	header_pages = FlatPage.objects.all()
+	"""
+	Render menu horizontal
+	"""
+	header_pages = ParentPage.objects.all().order_by('show_after')
 
 	menu = "<ul class='menu-buttons'>"
-	for page in header_pages:
-		li = "<li class='menu-item'><a href='{0}'>{1}</a>".format(page.url, page.title)
+	for index, page in enumerate(header_pages):
+		li = "<li class='menu item_{0}'><a href='{1}'>{2}</a>".format(index, page.url, page.title)
 		menu+=li
 	menu+="</ul>"
 
