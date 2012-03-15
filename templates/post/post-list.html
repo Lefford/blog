@@ -2,17 +2,38 @@
   <section>
     {% for post in object_list %}
      <article>
+	<h2><a href='{% url post-detail post.id %}'>{{ post.title}}</a></h2>
 	<div class='data-block'>
-		<abbr class='published' title='{{post.date_created}}'>
-			<span class='month'>{{post.date_created|date:'M'}}</span>
-			<span class='day'>{{post.date_created|date:'t'}}</span>
-		</abbr>
-		<h2>{{ post.title}}</h2>
+		<div class='published' title='{{post.date_created}}'>
+		      <p>
+			{{post.date_created|date:'t'}}
+			<br/>
+			<span class='up'>{{post.date_created|date:'M'}}</span>
+		      </p>
+		</div>
 	</div>
-	<div>
+	<div class='entry'>
 		{{ post.body }}
 	</div>
-	<a href='{% url post-detail post.id %}'>{{ post.title }}</a>
+	<div class='read-more'>
+		<a class='read-more' href='{% url post-detail post.id %}'>More</a>
+		<div class='clear'></div>
+	</div>
+	<div class='extra clear-right'>
+		{% if post.total_comments %}
+			<p>{{ post.total_comments }} dd</p>
+		{% else %}
+			<div class='wrapper'>
+			  <div class='comment'>
+			    <div class='cbg-color chead'>0
+			      <div class='cbg-color ctail'>&nbsp</div>
+			    </div>
+			    <span>comments</span>
+			  </div>
+			  <div class='clear'></div>
+			</div>
+		{% endif %}
+	</div>
     </article>
     {% endfor %}
   </section>
