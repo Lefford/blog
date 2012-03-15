@@ -1,0 +1,8 @@
+{% for block in contentblocks %}
+  <div class='contentblock'>
+    <h2>{{ block.title }}</h2>
+      <div class='cb-content'>
+        {{ block.content }}
+      </div>
+  </div>
+{% endfor %}
