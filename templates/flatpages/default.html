@@ -13,5 +13,9 @@
     </div>
   </div>
 {% endblock %}
+{% block breadcrumb %}{{ block.super }}<span>&raquo <a href='/{{ page.title }}'>{{ page.title }}</a></span>{% endblock %}
 {% block content %}{% endblock %}
-{% block primary %}Primary{% endblock %}
+{% block primary %}
+  Primary
+  {% include 'post/contentblock.html' %}
+{% endblock %}
