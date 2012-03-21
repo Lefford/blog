@@ -2,7 +2,7 @@
   <div class='contentblock'>
     <h2>{{ block.title }}</h2>
       <div class='cb-content'>
-        {{ block.content }}
+          {{ block.content|safe }}
       </div>
   </div>
 {% endfor %}
