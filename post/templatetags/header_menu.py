@@ -7,7 +7,7 @@ def header_menu():
 	"""
 	Render menu horizontal
 	"""
-	header_pages = ParentPage.objects.all().order_by('show_after')
+	header_pages = ParentPage.objects.filter(actief=True).order_by('show_after')
 
 	menu = "<ul class='menu-buttons'>"
 	for index, page in enumerate(header_pages):
