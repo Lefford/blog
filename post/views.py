@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import TemplateView, DetailView, View
 from django.views.generic.list import BaseListView
 from django.views.generic.detail import BaseDetailView
 from django.http import HttpResponseRedirect
@@ -75,3 +75,13 @@ class PostDetailView(CMSPage, DetailView):
 	template_name = 'flatpages/post-detail.html'
 	context_object_name = 'post'
 	model = Post
+
+class TwitterView(View):
+	pass
+
+class JSONResponseMixin(object):
+	pass
+
+class TwitterMixin(object):
+	pass
+

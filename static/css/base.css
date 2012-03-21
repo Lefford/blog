@@ -14,6 +14,8 @@ ul.menu-buttons { padding: 0px;}
 article h2 a {color:#636363; font-weight: normal; font-style: normal;}
 article h2 a:hover {color: #291A30; }
 article .entry {margin-top: 30px; color: #888;}
+.contentblock { border-bottom: 1px dotted gainsboro; min-height: 150px;}
+.contentblock h2 {font-size: 1em; color: #45B5AD; letter-spacing: 1px;}
 .data-block {position: absolute; left: -70px; top: -10px; width: 55px; height: 55px; border-radius: 30px; background-color: #45B5AD;}
 .data-block p {margin: 10px 0; -webkit-transform: rotate(-30deg); text-align: center; line-height: 16px;}
 .comment span { position: relative; bottom: 7px; font-size: 12px;}
@@ -23,15 +25,19 @@ article .entry {margin-top: 30px; color: #888;}
 .ctail {display: block; height: 0px; width: 0px; border-top: 5px solid #888; border-right: 5px solid white; position: relative; right: -7px;}
 .read-more a {float: right;}
 #menu { height: 80px; }
-#page {background-color: #F2F2F2; min-width: 1000px; height: 100%}
+#page { min-width: 1000px; height: 100%}
 #header-wrapper{ width: 1020px;}
+#primary { border-left: 1px dotted #C7C7C7; padding: 0 0 0 3%;}
 #content {width: 620px }
 #container {margin-top: 30px;}
 #container, #breadcrumbs { margin: 0 auto; width:980px; position: relative;}
 #container-wrapper { margin-top: 30px;}
 #breadcrumbs {height: 25px; border-top: thin dotted #D1D1D1; border-bottom: thin dotted #D1D1D1; font-family: helvetica;}
 #primary { width: 300px; height:100%; }
-#breadcrumbs span {color: #BABABA; font-size: 11px; letter-spacing: 1px}
+#breadcrumbs span, #twitter span {color: #BABABA; font-size: 11px; letter-spacing: 1px}
+#tw-wrap { width: 980px; margin: 0 auto; border-top: thin dotted #D1D1D1; position: relative;}
+#tw-messages {margin: 0 auto; position: relative}
+#tw-title {position: absolute; left:0px; top:0px;}
 .read-more {margin-top: 15px}
 a.read-more {border-radius: 10px; background-color: #007abe; padding: 10px 35px; width:35px; font-size: 1em; height: 20px; line-height: 20px; text-align: center; color: #fff; margin: 5px;}
 .right-side {position: absolute; right:0px; top: 0px;}

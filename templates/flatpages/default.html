@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% block javascript %}
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script src="{{STATIC_URL}}js/scripts.js"></script>
+{% endblock %}
 {% load header_menu %}
 
 {% block header %}
@@ -12,6 +16,16 @@
      </div>
     </div>
   </div>
+{% endblock %}
+{% block socialmedia %}
+<div id='twitter'>
+  <div id='tw-wrap'>
+      <span id="tw-title" class='small'>Latest twitter feed &raquo;</span>
+      <div id='tw-messages'>
+	  <!-- Twitter message(s) get loaded -->
+      </div>
+   </div>
+</div>
 {% endblock %}
 {% block breadcrumb %}{{ block.super }}<span>&raquo <a href='{{ page.url }}'>{{ page.title }}</a></span>{% endblock %}
 {% block content %}{% endblock %}
