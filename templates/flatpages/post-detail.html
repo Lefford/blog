@@ -1,5 +1,6 @@
-{% extends 'flatpages/default.html' %}
-
+{% extends 'flatpages/blog.html' %}
+<! -- Breadcumbs extends blog.html -->
+{% block breadcrumb %}{{ block.super }} <span>&raquo; entry &raquo; {{object.title}}</span>{% endblock %}
 {% block content %}
   {% include 'post/post-detail.html' %}
 {% endblock %}
