@@ -1,7 +1,7 @@
 {% block content %}
     <h1 class='post'>{{post.title }}</h1>	
     <div class='entry-content'>
-	{{ post.body }}
+	{{ post.body|safe }}
 	Helllo shout town
     </div>
 {% endblock %}
