@@ -1,4 +1,3 @@
-from post.models import ParentPage
 from django.http import Http404
 from django.conf import settings
 from post.views import PageView
@@ -10,6 +9,7 @@ class PageFallbackMiddleware(object):
 		if response.status_code != 404:
 			return response
 		try:
+			print 'request path {0}'.format(request.path)
 			return PageView.as_view()(request, url=request.path_info)
 		except Http404:
 			return response
