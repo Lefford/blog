@@ -1,0 +1,7 @@
+{% extends 'flatpages/default.html' %}
+
+{% block breadcrumb %}{{ block.super }}{% endblock %}
+{% block content %}
+  {% include 'post/post-list.html' %}
+{% endblock %}
+
