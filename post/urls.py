@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, include, url
+#from django.conf.urls.defaults import patterns, include, url
 from post.views import PageView, PostListView
 from post.models import Post
 from django.views.generic.detail import DetailView
