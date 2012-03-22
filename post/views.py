@@ -2,7 +2,7 @@ from django.views.generic import TemplateView, ListView
 from django.http import HttpResponseRedirect
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from post.models import ParentPage, ContentBlock
+from post.models import ParentPage, ContentBlock, Post
 
 class PageView(TemplateView):
 
@@ -27,6 +27,9 @@ class PageView(TemplateView):
 		return context
 
 class PostListView(ListView):
+	
+	template_name = 'post/post-list.html'
+	model = Post
 	
 	def get_context_data(self, **kwargs):
 		context = super(PostListView, self).get_context_data(**kwargs)

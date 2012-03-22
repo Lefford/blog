@@ -11,6 +11,9 @@ class BasePage(models.Model):
 	registration_required 	= models.BooleanField()
 	#breadcrumb 		= models.CharField(max_length=20, blank=True)	
 
+	class Meta:
+		abstract = True
+
 class Post(models.Model):
 	title 		= models.CharField(max_length=255)
 	date_created 	= models.DateField(auto_now_add=True)

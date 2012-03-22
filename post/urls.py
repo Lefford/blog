@@ -1,6 +1,8 @@
 from django.conf.urls.defaults import patterns, include, url
 from post.views import PageView, PostListView
+from post.models import Post
 from django.views.generic.detail import DetailView
+from django.views.generic import ListView
 
 urlpatterns = patterns('',
 	url(r'^$', PostListView.as_view(), name='home'),

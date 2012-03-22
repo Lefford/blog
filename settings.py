@@ -114,7 +114,6 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'signals',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
