@@ -1,6 +1,8 @@
 html, body, ul, li, a h1, h2 {margin: 0px; padding: 0px;}
 a { text-decoration: none;}
 .center { width: 980px; margin: 0 auto; position: relative;}
+html, body, ul { margin:0px; padding:0px}
+.center { width: 950px; margin: 0 auto; position: relative;}
 ul { list-style: none; }
 ul > li:first-child { margin-right: 0px;}
 ul > li.menu { float: left; margin-right:1em; }

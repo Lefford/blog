@@ -11,6 +11,11 @@ class BasePage(models.Model):
 	registration_required 	= models.BooleanField()
 	#breadcrumb 		= models.CharField(max_length=20, blank=True)	
 
+class Post(models.Model):
+	title 		= models.CharField(max_length=255)
+	date_created 	= models.DateField(auto_now_add=True)
+	body 		= models.TextField()
+
 	def __unicode__(self):
 		return '{0} -- {1}'.format(self.url, self.title)
 	
@@ -63,3 +68,12 @@ class Post(models.Model):
 
 	def __unicode__(self):
 		return self.title
+class CMSPage(FlatPage):
+	order_by = models.ForeignKey('CMSPage', null=True) 
+
+class SubPage(CMSPage):
+	cmspage = models.ForeignKey('CMSPage', related_name='sub_page')
+
+class RealPage(FlatPage):
+	class Meta:
+		proxy = True
