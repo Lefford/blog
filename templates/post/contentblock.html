@@ -2,7 +2,9 @@
   <div class='contentblock'>
     <h2>{{ block.title }}</h2>
       <div class='cb-content'>
-        {{ block.content }}
+	{% autoescape off %}
+	  {{ block.content }}
+	{% endautoescape %}
       </div>
   </div>
 {% endfor %}

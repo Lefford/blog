@@ -6,7 +6,7 @@ from post.models import ParentPage, ContentBlock
 
 class PageView(TemplateView):
 
-	template_name = 'flatpages/default.html'
+	template_name = 'flatpages/base.html'
 		
 	def get(self, request, *args, **kwargs):
 		url = kwargs['url']
