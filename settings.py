@@ -1,5 +1,5 @@
 # Django settings for blog project.
-import os
+#import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
