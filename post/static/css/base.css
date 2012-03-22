@@ -30,13 +30,13 @@ article .entry {margin-top: 30px; color: #888;}
 #primary { border-left: 1px dotted #C7C7C7; padding: 0 0 0 3%;}
 #content {width: 620px }
 #container {margin-top: 30px;}
-#container, #breadcrumbs { margin: 0 auto; width:980px; position: relative;}
+#container, #breadcrumbs, #twitter { margin: 0 auto; width:980px; position: relative;}
 #container-wrapper { margin-top: 30px;}
-#breadcrumbs {height: 25px; border-top: thin dotted #D1D1D1; border-bottom: thin dotted #D1D1D1; font-family: helvetica;}
+#breadcrumbs {border-bottom: thin dotted #D1D1D1; font-family: helvetica;}
+#breadcrumbs, #twitter {height: 25px; border-top: thin dotted #D1D1D1;}
 #primary { width: 300px; height:100%; }
-#breadcrumbs span, #twitter span {color: #BABABA; font-size: 11px; letter-spacing: 1px}
-#tw-wrap { width: 980px; margin: 0 auto; border-top: thin dotted #D1D1D1; position: relative;}
-#tw-messages {margin: 0 auto; position: relative}
+#breadcrumbs span, #twitter span {line-height: 25px; color: #BABABA; font-size: 11px; letter-spacing: 1px}
+#tw-messages {margin: 0 auto; position: relative; line-height: 25px;}
 #tw-title {position: absolute; left:0px; top:0px;}
 .read-more {margin-top: 15px}
 a.read-more {border-radius: 10px; background-color: #007abe; padding: 10px 35px; width:35px; font-size: 1em; height: 20px; line-height: 20px; text-align: center; color: #fff; margin: 5px;}
